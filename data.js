@@ -357,6 +357,27 @@ const PRODOTTI = [
   },
 ];
 
+// Foto dei prodotti: og:image ufficiali dei produttori (hotlink) oppure
+// Wikimedia Commons (licenze libere); fotoPage = pagina di provenienza/attribuzione.
+const FOTO = {
+  "echo-dot-max": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Amazon_Echo_Dot_%28RS03QR%29-0479.jpg/960px-Amazon_Echo_Dot_%28RS03QR%29-0479.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Amazon_Echo_Dot_(RS03QR)-0479.jpg" },
+  "fire-tv-stick-4k": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Amazon_Fire_TV_4k.jpg/960px-Amazon_Fire_TV_4k.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Amazon_Fire_TV_4k.jpg" },
+  "kindle-paperwhite": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2023_Amazon_Kindle_Paperwhite_%281%29.jpg/960px-2023_Amazon_Kindle_Paperwhite_%281%29.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:2023_Amazon_Kindle_Paperwhite_(1).jpg" },
+  "ring-battery-doorbell": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Ring_Video_Doorbell_2.jpg/960px-Ring_Video_Doorbell_2.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Ring_Video_Doorbell_2.jpg" },
+  "blink-mini-2": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Blink_Mini_Security_Camera.jpg/960px-Blink_Mini_Security_Camera.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Blink_Mini_Security_Camera.jpg" },
+  "iphone-17": { foto: "https://www.apple.com/v/iphone-17/g/images/meta/iphone-17_overview__cg0rlzmbhl7m_og.png", fotoPage: "https://www.apple.com/iphone-17/" },
+  "airpods-pro-3": { foto: "https://www.apple.com/v/airpods-pro/s/images/meta/og__c0ceegchesom_overview.png", fotoPage: "https://www.apple.com/airpods-pro/" },
+  "apple-watch-s10": { foto: "https://www.apple.com/assets-www/en_WW/watch/og/watch_og_1ff2ee953.png", fotoPage: "https://www.apple.com/apple-watch-series-10/" },
+  "macbook-air-m5": { foto: "https://www.apple.com/v/macbook-air/z/images/meta/macbook_air_mx__ez5y0k5yy7au_og.png", fotoPage: "https://www.apple.com/macbook-air/" },
+  "ipad-10": { foto: "https://www.apple.com/v/ipad-11/d/images/meta/ipad-11_overview__brh97xhhd8b6_og.png", fotoPage: "https://www.apple.com/ipad-11/" },
+  "ps5": { foto: "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21", fotoPage: "https://www.playstation.com/en-us/ps5/" },
+  "switch-2": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Nintendo_Switch_2_in_Docking_Console.jpg/960px-Nintendo_Switch_2_in_Docking_Console.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Nintendo_Switch_2_in_Docking_Console.jpg" },
+  "samsung-qled-55": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Samsung_QLED_TV_8K_-_75_inches_-_2018-11-02.jpg/960px-Samsung_QLED_TV_8K_-_75_inches_-_2018-11-02.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Samsung_QLED_TV_8K_-_75_inches_-_2018-11-02.jpg" },
+  "robot-aspirapolvere": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/IRobot_Roomba_i7%2B.jpg/960px-IRobot_Roomba_i7%2B.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:IRobot_Roomba_i7%2B.jpg" },
+  "lego-1000": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lego_Space_-_Set_462_Mobile_Rocket_Launcher_%287465210278%29.jpg/960px-Lego_Space_-_Set_462_Mobile_Rocket_Launcher_%287465210278%29.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Lego_Space_-_Set_462_Mobile_Rocket_Launcher_(7465210278).jpg" },
+};
+PRODOTTI.forEach((p) => Object.assign(p, FOTO[p.id]));
+
 // Fattori per le equivalenze dello scontrino (valori medi, indicativi)
 const EQUIV = {
   kgCo2PerKmAuto: 0.17,   // auto media europea, uso reale

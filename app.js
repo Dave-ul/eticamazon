@@ -19,6 +19,15 @@ const BADGE = {
   assente: "DATO NON PUBBLICATO",
 };
 
+// Foto reale con fallback all'emoji se l'immagine non carica;
+// il link porta alla pagina di provenienza (attribuzione per le foto Commons).
+function picHtml(p) {
+  if (!p.foto) return p.emoji;
+  return `<a href="${p.fotoPage}" target="_blank" rel="noopener" title="Origine della foto">
+    <img src="${p.foto}" alt="${esc(p.nome)}" loading="lazy"
+      onerror="this.closest('.pic').textContent='${p.emoji}'"></a>`;
+}
+
 function stelleHtml(p) {
   return `<div class="stars">${"★".repeat(Math.round(p.stelle))}${"☆".repeat(5 - Math.round(p.stelle))}
     ${String(p.stelle).replace(".", ",")} <small>(${p.recensioni})</small></div>`;
@@ -30,7 +39,7 @@ function renderCatalogo(filtro = "") {
   const lista = PRODOTTI.filter((p) => !q || (p.nome + " " + p.marca).toLowerCase().includes(q));
   document.getElementById("griglia").innerHTML = lista.map((p) => `
     <article class="card">
-      <div class="pic" style="background:${p.tile}">${p.emoji}</div>
+      <div class="pic">${picHtml(p)}</div>
       <div class="body">
         <div class="marca">${esc(p.marca)}</div>
         <h2>${esc(p.nome)}</h2>
@@ -68,7 +77,7 @@ function renderCarrello() {
     const p = byId(id);
     return `
     <div class="cart-row">
-      <div class="pic" style="background:${p.tile}">${p.emoji}</div>
+      <div class="pic">${picHtml(p)}</div>
       <div class="info">
         <strong>${esc(p.nome)}</strong><br>
         <span class="co2">${p.co2 !== null ? `${fmtNum(p.co2 * cart[id], 1)} kg CO₂e` : "CO₂ non dichiarata dal produttore"}</span>
