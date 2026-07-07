@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eticamazon — il negozio che ti dice il prezzo vero</title>
+  <meta name="description" content="Parodia critica di Amazon: metti nel carrello i prodotti di punta, ma al checkout paghi in CO₂, acqua e condizioni di lavoro. Dati reali con fonti.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="logo" href="#catalogo">etic<span>amazon</span><svg class="smile" viewBox="0 0 60 16" aria-hidden="true"><path d="M2 3 Q30 18 54 5" fill="none" stroke="#2e9e5b" stroke-width="3" stroke-linecap="round"/><path d="M54 5 l-6 -1 m6 1 l-2 5" fill="none" stroke="#2e9e5b" stroke-width="3" stroke-linecap="round"/></svg></a>
+  <div class="searchbar" role="presentation">
+    <input type="search" id="cerca" placeholder="Cerca tra i prodotti di punta (tranne il vestiario)…" aria-label="Cerca prodotti">
+    <button aria-hidden="true" tabindex="-1">🔍</button>
+  </div>
+  <a class="cart-btn" href="#carrello" aria-label="Carrello">
+    🛒 <span id="cart-count" class="cart-count">0</span>
+    <span class="cart-label">Carrello</span>
+  </a>
+</header>
+
+<div class="subbar">
+  Consegna gratuita della consapevolezza · Nessun soldo richiesto, mai · Ogni dato è <a href="#fonti-note">verificabile alla fonte</a>
+</div>
+
+<main>
+
+  <!-- ===================== CATALOGO ===================== -->
+  <section id="view-catalogo">
+    <div class="hero">
+      <h1>I prodotti di punta. Il prezzo vero.</h1>
+      <p>Qui si "compra" come su Amazon: carrello, checkout, tutto uguale. Tranne una cosa: al momento di pagare non ti chiediamo soldi — ti mostriamo <strong>quanta CO₂, quanta acqua e quanto lavoro umano</strong> costa davvero il tuo ordine, con dati reali e fonti citate.</p>
+    </div>
+    <div id="griglia" class="grid"></div>
+  </section>
+
+  <!-- ===================== CARRELLO ===================== -->
+  <section id="view-carrello" hidden>
+    <h1>Il tuo carrello</h1>
+    <div id="carrello-righe"></div>
+    <div class="cart-actions">
+      <a href="#catalogo" class="btn-secondary">← Continua a curiosare</a>
+      <button id="btn-checkout" class="btn-primary">Procedi al checkout etico</button>
+    </div>
+  </section>
+
+  <!-- ===================== CHECKOUT ===================== -->
+  <section id="view-checkout" hidden>
+    <div class="receipt">
+      <div class="receipt-head">
+        <h1>💚 Ordine "confermato"</h1>
+        <p>Nessun addebito. Questo è lo <strong>scontrino dell'impatto</strong>: quello che il tuo ordine sarebbe costato al pianeta e a chi lo fabbrica, impacchetta e consegna.</p>
+      </div>
+      <div id="scontrino"></div>
+      <div class="cart-actions">
+        <a href="#catalogo" class="btn-secondary">← Torna al catalogo</a>
+        <button id="btn-svuota" class="btn-primary">Svuota il carrello</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="fonti-note">
+  <h2>Che cos'è eticamazon?</h2>
+  <p>Un progetto educativo e satirico, <strong>non affiliato ad Amazon</strong> né ad alcun marchio citato. Niente viene venduto e nessun dato personale viene raccolto: il carrello vive solo nel tuo browser. I prezzi sono indicativi. Il vestiario è escluso di proposito: quella filiera merita un negozio tutto suo.</p>
+  <p>Le cifre di CO₂ provengono, dove esistono, dai report ambientali ufficiali dei produttori (verificati da terze parti come Carbon Trust e SCS); dove i produttori tacciono, da studi indipendenti dichiarati come tali. Ogni scheda e ogni scontrino citano le fonti. Le equivalenze (km in auto, alberi, docce) usano valori medi e servono a farsi un'idea, non a fare scienza.</p>
+  <p class="ewaste">Nel mondo si generano <strong>62 miliardi di kg di rifiuti elettronici l'anno</strong> e meno di un quarto viene riciclato correttamente (<a href="https://ewastemonitor.info/" target="_blank" rel="noopener">Global E-waste Monitor 2024, ONU</a>). Il modo più etico di comprare resta non comprare — o comprare usato, riparare, far durare.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
