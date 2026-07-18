@@ -6,11 +6,13 @@ Parodia critica di Amazon: navighi i prodotti di punta (niente vestiario), li me
 
 ## I dati
 
-- Dove il produttore pubblica un report verificato (Apple PER, fact sheet Amazon certificati Carbon Trust/SCS, EPD Samsung), usiamo quello → badge **DATO UFFICIALE VERIFICATO**.
+- Dove il produttore pubblica un report verificato (Apple PER, fact sheet Amazon e Product Environmental Report Google/Samsung certificati Carbon Trust/SCS, EPD Samsung, Eco Profile Microsoft, PCF Dell, LCA Fairphone rivista da Fraunhofer IZM, PCF Logitech ISO 14067) usiamo quello → badge **DATO UFFICIALE VERIFICATO**.
 - Dove non esiste, usiamo studi peer-reviewed o proxy dichiarati (es. PS4 → PS5) → badge **STIMA INDIPENDENTE**.
 - Dove non esiste nulla (Nintendo), lo diciamo → badge **DATO NON PUBBLICATO** e il totale dello scontrino viene marcato come sottostimato.
 
-Le fonti su lavoro e filiera: report del Strategic Organizing Center e della Commissione HELP del Senato USA sui magazzini Amazon, Amnesty International sul cobalto congolese, The Guardian su Foxconn, BBC sui lavoratori delle fab Samsung, KnowTheChain sulla trasparenza. Tutti i link sono in `data.js`.
+Non tutto è condanna: il **Fairphone 5** (LCA ufficiale, oro Fairtrade, cobalto equo, 10/10 su iFixit, 8-10 anni di aggiornamenti) è il contro-esempio del catalogo — l'opposto dell'usa-e-getta.
+
+Le fonti su lavoro e filiera: report del Strategic Organizing Center e della Commissione HELP del Senato USA sui magazzini Amazon, Amnesty International sul cobalto congolese, The Guardian su Foxconn, BBC sui lavoratori delle fab Samsung, KnowTheChain sulla trasparenza, Fairphone sui materiali equi. Tutti i link sono in `data.js`.
 
 ## Tecnica
 
