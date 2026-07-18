@@ -6,9 +6,9 @@ Parodia critica di Amazon: navighi i prodotti di punta (niente vestiario), li me
 
 ## I dati
 
-- Dove il produttore pubblica un report verificato (Apple PER, fact sheet Amazon e Product Environmental Report Google/Samsung certificati Carbon Trust/SCS, EPD Samsung, Eco Profile Microsoft, PCF Dell, LCA Fairphone rivista da Fraunhofer IZM, PCF Logitech ISO 14067) usiamo quello → badge **DATO UFFICIALE VERIFICATO**.
-- Dove non esiste, usiamo studi peer-reviewed o proxy dichiarati (es. PS4 → PS5) → badge **STIMA INDIPENDENTE**.
-- Dove non esiste nulla (Nintendo), lo diciamo → badge **DATO NON PUBBLICATO** e il totale dello scontrino viene marcato come sottostimato.
+**Solo dati certificati.** Ogni prodotto in catalogo ha un'impronta di carbonio del ciclo di vita **pubblicata dal produttore o verificata da terze parti** → badge **DATO UFFICIALE VERIFICATO**. Le fonti: Apple Product Environmental Report (ISO 14067), fact sheet Amazon e Product Environmental Report Google/Samsung certificati/verificati Carbon Trust/SCS, EPD Samsung, Eco Profile Microsoft, LCA Fairphone rivista da Fraunhofer IZM, PCF Logitech ISO 14067 (revisione DEKRA).
+
+Niente stime, proxy o dati non pubblicati: dove un produttore non pubblica un dato verificato, il prodotto non entra nel negozio.
 
 Non tutto è condanna: il **Fairphone 5** (LCA ufficiale, oro Fairtrade, cobalto equo, 10/10 su iFixit, 8-10 anni di aggiornamenti) è il contro-esempio del catalogo — l'opposto dell'usa-e-getta.
 
