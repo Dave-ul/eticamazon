@@ -22,14 +22,6 @@ const FONTI = {
     label: "Tribunale di Francoforte vieta la pubblicità \"CO₂ neutrale\" dell'Apple Watch",
     url: "https://www.notebookcheck.net/Apple-Watch-Series-10-is-not-climate-neutral-Court-prohibits-greenwashing-marketing.1097378.0.html",
   },
-  cambridgePs4: {
-    label: "University of Cambridge IfM — impatto ambientale della PlayStation 4",
-    url: "https://www.ifm.eng.cam.ac.uk/insights/sustainability/the-environmental-impact-of-a-playstation-4/",
-  },
-  mongabayConsole: {
-    label: "Mongabay — l'impatto ambientale delle console (2022)",
-    url: "https://news.mongabay.com/2022/10/playing-dangerously-the-environmental-impact-of-video-gaming-consoles/",
-  },
   samsungEpd: {
     label: "Samsung — Product Environmental Report QLED 55\" (EPD)",
     url: "https://www.samsung.com/global/sustainability/media/pdf/TV_QLED_Environmental_Report_EN.pdf",
@@ -41,10 +33,6 @@ const FONTI = {
   vacuumLca: {
     label: "Gallego-Schmid et al., Science of the Total Environment (2016) — LCA aspirapolveri",
     url: "https://www.sciencedirect.com/science/article/pii/S0048969716305745",
-  },
-  legoFortune: {
-    label: "Fortune — LEGO, plastica riciclata ed emissioni (2023)",
-    url: "https://fortune.com/europe/2023/09/25/lego-scraps-plans-bricks-plastic-bottles-rpet-higher-carbon-emissions/",
   },
   waterSmartphone: {
     label: "Waterwise — Virtual water footprint (~12.760 L per smartphone)",
@@ -102,10 +90,6 @@ const FONTI = {
     label: "Microsoft — Surface Laptop 13\" Eco Profile",
     url: "https://www.microsoft.com/content/dam/microsoft/mlsd/documents/presentations/en-us/surface/MSFT-echo-Ecoprofile-SurfaceLaptop-13inch.pdf",
   },
-  dellXps: {
-    label: "Dell — Product Carbon Footprint XPS 13 (9350), datasheet 2024 (PAIA, ISO 14040)",
-    url: "https://www.delltechnologies.com/asset/en-us/products/laptops-and-2-in-1s/technical-support/xps-13-9350-pcf-datasheet.pdf",
-  },
   amazonEchoShow8: {
     label: "Amazon — Product Sustainability Fact Sheet Echo Show 8 (3ª gen)",
     url: "https://sustainability.aboutamazon.com/devices_fact_sheet_echo_show_8.pdf",
@@ -149,14 +133,6 @@ const LAVORO = {
   samsungFab: {
     text: "Samsung si è scusata pubblicamente (2018) con i lavoratori delle sue fabbriche di semiconduttori ammalatisi di leucemia e altre patologie, dopo oltre dieci anni di vertenze.",
     fonte: FONTI.bbcSamsungWorkers,
-  },
-  trasparenzaNintendo: {
-    text: "Nintendo non pubblica un'analisi del ciclo di vita dei suoi prodotti e ottiene punteggi bassi nei benchmark sulla trasparenza della filiera (KnowTheChain).",
-    fonte: FONTI.knowTheChain,
-  },
-  legoOk: {
-    text: "Onestà impone di dirlo: le condizioni di lavoro nelle fabbriche LEGO risultano tra le migliori del settore giocattoli. Il problema qui è la materia prima, non chi la lavora.",
-    fonte: FONTI.legoFortune,
   },
   fairphoneEtico: {
     text: "L'eccezione del negozio: Fairphone paga un bonus di salario di sussistenza agli operai di assemblaggio, usa oro certificato Fairtrade e cobalto da filiere sotto audit, e progetta il telefono per essere riparato (10 moduli sostituibili, 10/10 su iFixit). Non risolve tutto, ma è l'opposto dell'usa-e-getta.",
@@ -399,38 +375,6 @@ const PRODOTTI = [
     lavoro: [LAVORO.foxconn, LAVORO.cobalto],
   },
   {
-    id: "ps5",
-    emoji: "🎮",
-    tile: "#00439c",
-    nome: "Sony PlayStation 5",
-    marca: "Sony",
-    prezzo: 549,
-    stelle: 4.8, recensioni: "78.930",
-    co2: 89,
-    co2Nota: "Sony non pubblica l'LCA completa della PS5: 89 kg è il dato di produzione+trasporto della PS4 (Univ. di Cambridge), usato come proxy prudente. L'uso aggiunge ~0,022 kg CO₂ l'ora: con 2 ore al giorno per 5 anni sono altri ~80 kg.",
-    co2Fonte: FONTI.cambridgePs4,
-    transparency: "stima",
-    acquaL: null,
-    acquaNota: null,
-    lavoro: [LAVORO.assemblaggiaCina, LAVORO.cobaltoGenerico],
-  },
-  {
-    id: "switch-2",
-    emoji: "🕹️",
-    tile: "#e60012",
-    nome: "Nintendo Switch 2",
-    marca: "Nintendo",
-    prezzo: 469,
-    stelle: 4.8, recensioni: "51.204",
-    co2: null,
-    co2Nota: "Nintendo non pubblica alcuna analisi del ciclo di vita. Gli studi indipendenti stimano per la Switch originale ~13,8 kg CO₂ l'anno di solo uso. Il dato di produzione resta un segreto aziendale.",
-    co2Fonte: FONTI.mongabayConsole,
-    transparency: "assente",
-    acquaL: null,
-    acquaNota: null,
-    lavoro: [LAVORO.trasparenzaNintendo, LAVORO.assemblaggiaCina, LAVORO.cobaltoGenerico],
-  },
-  {
     id: "samsung-qled-55",
     emoji: "🖥️",
     tile: "#111111",
@@ -514,22 +458,6 @@ const PRODOTTI = [
     lavoro: [LAVORO.assemblaggiaCina, LAVORO.cobaltoGenerico],
   },
   {
-    id: "dell-xps-13",
-    emoji: "💻",
-    tile: "#3a3a3a",
-    nome: "Dell XPS 13 (9350)",
-    marca: "Dell",
-    prezzo: 1399,
-    stelle: 4.5, recensioni: "14.226",
-    co2: 265,
-    co2Nota: "265 kg CO₂e sul ciclo di vita, datasheet PCF ufficiale Dell (2024). È una stima statistica dichiarata dal produttore (metodo PAIA, ISO 14040) con incertezza ±48 kg: ~81% dell'impatto è nella produzione.",
-    co2Fonte: FONTI.dellXps,
-    transparency: "ufficiale",
-    acquaL: null,
-    acquaNota: "La fabbricazione dei chip richiede grandi volumi di acqua ultrapura.",
-    lavoro: [LAVORO.assemblaggiaCina, LAVORO.cobaltoGenerico],
-  },
-  {
     id: "mx-master-3s",
     emoji: "🖱️",
     tile: "#2b2b2b",
@@ -545,23 +473,6 @@ const PRODOTTI = [
     acquaNota: null,
     lavoro: [LAVORO.logitechEtichetta, LAVORO.assemblaggiaCina, LAVORO.cobaltoGenerico],
   },
-  {
-    id: "lego-1000",
-    emoji: "🧱",
-    tile: "#ffcf00",
-    emojiDark: true,
-    nome: "Set LEGO da ~1.000 pezzi",
-    marca: "LEGO",
-    prezzo: 159.99,
-    stelle: 4.9, recensioni: "28.442",
-    co2: 40,
-    co2Nota: "Stima 20-60 kg CO₂e per 1.000 mattoncini in ABS (qui usiamo il valore centrale, 40 kg). Servono ~2 kg di petrolio per ogni kg di ABS; il piano LEGO per mattoncini in PET riciclato è stato abbandonato perché avrebbe aumentato le emissioni.",
-    co2Fonte: FONTI.legoFortune,
-    transparency: "stima",
-    acquaL: null,
-    acquaNota: null,
-    lavoro: [LAVORO.legoOk],
-  },
 ];
 
 // Foto dei prodotti: og:image ufficiali dei produttori (hotlink) oppure
@@ -576,15 +487,11 @@ const FOTO = {
   "apple-watch-s10": { foto: "https://www.apple.com/assets-www/en_WW/watch/og/watch_og_1ff2ee953.png", fotoPage: "https://www.apple.com/apple-watch-series-10/" },
   "macbook-air-m5": { foto: "https://www.apple.com/v/macbook-air/z/images/meta/macbook_air_mx__ez5y0k5yy7au_og.png", fotoPage: "https://www.apple.com/macbook-air/" },
   "ipad-10": { foto: "https://www.apple.com/v/ipad-11/d/images/meta/ipad-11_overview__brh97xhhd8b6_og.png", fotoPage: "https://www.apple.com/ipad-11/" },
-  "ps5": { foto: "https://gmedia.playstation.com/is/image/SIEPDC/ps5-product-thumbnail-01-en-14sep21", fotoPage: "https://www.playstation.com/en-us/ps5/" },
-  "switch-2": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Nintendo_Switch_2_in_Docking_Console.jpg/960px-Nintendo_Switch_2_in_Docking_Console.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Nintendo_Switch_2_in_Docking_Console.jpg" },
   "samsung-qled-55": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Samsung_QLED_TV_8K_-_75_inches_-_2018-11-02.jpg/960px-Samsung_QLED_TV_8K_-_75_inches_-_2018-11-02.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Samsung_QLED_TV_8K_-_75_inches_-_2018-11-02.jpg" },
   "fairphone-5": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Fairphone_5.png/960px-Fairphone_5.png", fotoPage: "https://commons.wikimedia.org/wiki/File:Fairphone_5.png" },
   "pixel-9": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Google_Pixel_9_%28Porcelain%29_front.svg/960px-Google_Pixel_9_%28Porcelain%29_front.svg.png", fotoPage: "https://commons.wikimedia.org/wiki/File:Google_Pixel_9_(Porcelain)_front.svg" },
   "galaxy-s24-ultra": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Samsung_S24_Ultra_Phone.png/960px-Samsung_S24_Ultra_Phone.png", fotoPage: "https://commons.wikimedia.org/wiki/File:Samsung_S24_Ultra_Phone.png" },
   "mac-mini-m4": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/MacMiniM4.jpg/960px-MacMiniM4.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:MacMiniM4.jpg" },
-  "dell-xps-13": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Dell_XPS_13_9350.jpg/960px-Dell_XPS_13_9350.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Dell_XPS_13_9350.jpg" },
-  "lego-1000": { foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Lego_Space_-_Set_462_Mobile_Rocket_Launcher_%287465210278%29.jpg/960px-Lego_Space_-_Set_462_Mobile_Rocket_Launcher_%287465210278%29.jpg", fotoPage: "https://commons.wikimedia.org/wiki/File:Lego_Space_-_Set_462_Mobile_Rocket_Launcher_(7465210278).jpg" },
 };
 PRODOTTI.forEach((p) => Object.assign(p, FOTO[p.id]));
 
