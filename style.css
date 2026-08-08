@@ -248,6 +248,9 @@ main { max-width: 1200px; margin: 0 auto; padding: 22px 16px 48px; }
 
 /* ---------- Scontrino ---------- */
 .receipt { max-width: 780px; margin: 0 auto; }
+.checkout-doc-link { max-width: 780px; margin: 18px auto 0; text-align: center; }
+.checkout-doc-link a { color: #007185; text-decoration: none; font-weight: 600; }
+.checkout-doc-link a:hover { text-decoration: underline; }
 .receipt-head {
   background: var(--eco-dark);
   color: #fff;
